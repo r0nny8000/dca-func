@@ -33,13 +33,31 @@ Moved the original files to the new folder
 
 Now Git, Azure and Poetry are initiated
 
-Or simply use
+Or simply use poetry init inside the folder
 
-    poetry init 
+Configuring the shell by updating the project toml with python version 3.10.*
 
-inside the folder
+    poetry config --list
+    poetry config virtualenvs.prefer-active-python true
+    pyenv versions
+    pyenv install 3.10.12
+    pyenv local 3.10.12
+    poetry install
+    poetry shell
+    which python
+
+Switched Python Interpreter in Codium in .vscode/settings.json (or using CMD+Shift+P and "Select Interpreter")
+
+    {
+        "python.defaultInterpreterPath": "/Users/me/Library/Caches/pypoetry/virtualenvs/marketdata-cli-MiIDVtXc-py3.7/bin/python"
+    }
+
+Adding azure function as dependency to poetry from requirements.txt
+
+    poetry add azure-functions
 
 
+    
 
 Getting started
 ---------------
