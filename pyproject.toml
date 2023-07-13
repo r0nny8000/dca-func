@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "dca-func"
+version = "0.1.0"
+description = ""
+authors = ["r0nny8000 <r0nny8000@bea2b.de>"]
+readme = "README.md"
+packages = [{include = "dca_func"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
