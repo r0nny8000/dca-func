@@ -56,6 +56,10 @@ Adding azure function as dependency to poetry from requirements.txt
 
     poetry add azure-functions
 
+Export Dependencies
+
+    poetry export -f requirements.txt --output requirements.txt --without-hashes
+
 
     
 
