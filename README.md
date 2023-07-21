@@ -60,6 +60,26 @@ Export Dependencies
 
     poetry export -f requirements.txt --output requirements.txt --without-hashes
 
+Setup and first deployment in Azure
+
+    az login
+    az group create --name dca-func-rg --location westeurope
+    az storage account create --name dca-func-st --location westeurope --resource-group dca-func-rg --sku Standard_LRS
+    az functionapp create --resource-group dca-func-rg --consumption-plan-location westeurope --runtime python --runtime-version 3.10 --functions-version 4 --name dca-func-app --os-type linux --storage-account dca-func-st
+    func azure functionapp publish dca-func-app
+    az functionapp config appsettings set --name dca-func-app --resource-group westeurope --settings AzureWebJobsFeatureFlags=EnableWorkerIndexing
+
+
+Deploy to Azure
+
+    func azure functionapp publish dca-func-app
+
+Logs
+
+    func azure functionapp logstream dca-func-app --browser
+
+
+
 
     
 
