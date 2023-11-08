@@ -2,9 +2,6 @@ DCA-FUNC
 ========
 
 
-
-
-
 What I did
 ----------
 
@@ -64,10 +61,10 @@ Setup and first deployment in Azure
 
     az login
     az group create --name dca-func-rg --location westeurope
-    az storage account create --name dca-func-st --location westeurope --resource-group dca-func-rg --sku Standard_LRS
-    az functionapp create --resource-group dca-func-rg --consumption-plan-location westeurope --runtime python --runtime-version 3.10 --functions-version 4 --name dca-func-app --os-type linux --storage-account dca-func-st
+    az storage account create --name dcafuncst --location westeurope --resource-group dca-func-rg --sku Standard_LRS
+    az functionapp create --resource-group dca-func-rg --consumption-plan-location westeurope --runtime python --runtime-version 3.10 --functions-version 4 --name dca-func-app --os-type linux --storage-account dcafuncst
     func azure functionapp publish dca-func-app
-    az functionapp config appsettings set --name dca-func-app --resource-group westeurope --settings AzureWebJobsFeatureFlags=EnableWorkerIndexing
+    az functionapp config appsettings set --name dca-func-app --resource-group dca-func-rg --settings AzureWebJobsFeatureFlags=EnableWorkerIndexing
 
 
 Deploy to Azure
