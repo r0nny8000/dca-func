@@ -1,8 +1,7 @@
 import datetime
 import logging
-#import azure.functions as func
-from azure import function as func
-from dca_func import tools as tools
+import azure.functions as func
+import dca_func.tools as tools
 
 
 app = func.FunctionApp()
