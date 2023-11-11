@@ -1,6 +1,7 @@
 import datetime
 import logging
-import azure.functions as func
+#import azure.functions as func
+from azure import function as func
 from dca_func import tools as tools
 
 
