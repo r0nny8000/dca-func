@@ -1,6 +1,8 @@
 import datetime
 import logging
 import azure.functions as func
+from dca_func import tools as tools
+
 
 app = func.FunctionApp()
 
@@ -8,6 +10,7 @@ app = func.FunctionApp()
 @app.route(route="dca", auth_level=func.AuthLevel.ANONYMOUS)
 def hello_function(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("HTTP TRIGGER FUNCTION EXECUTED: %s", req.method)
+    logging.info("TEST: " + tools.test())
     return func.HttpResponse("Hi")
 
 
