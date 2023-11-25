@@ -29,11 +29,12 @@ def coins_function(req: func.HttpRequest) -> func.HttpResponse:
         params["coin"] = "BTC"
 
         response = market.coins(params)
-        return response
+        return func.HttpResponse(response)
 
     except BitgetAPIException as e:
-        return "error:" + e.message
+        return func.HttpResponse("Error: " + e.message)
 
+    return func.HttpResponse("The end,")
     
 
 @app.function_name(name="dcatimer")
