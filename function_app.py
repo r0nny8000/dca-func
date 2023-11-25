@@ -11,7 +11,7 @@ app = func.FunctionApp()
 def hello_function(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("HTTP TRIGGER FUNCTION EXECUTED: %s", req.method)
     logging.info("TEST: " + tools.test())
-    return func.HttpResponse("Hi")
+    return func.HttpResponse("Hi. This is a test :" + tools.test())
 
 
 @app.function_name(name="dcatimer")
