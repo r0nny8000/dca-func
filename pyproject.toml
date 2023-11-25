@@ -9,6 +9,7 @@ packages = [{include = "dca_func"}]
 [tool.poetry.dependencies]
 python = "3.10.*"
 azure-functions = "^1.15.0"
+requests = "^2.31.0"
 
 
 [tool.poetry.group.dev.dependencies]

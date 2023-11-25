@@ -76,6 +76,14 @@ Logs
     func azure functionapp logstream dca-func-app --browser
 
 
+Downloaded and added Bitget API 
+    
+    git clone git@github.com:BitgetLimited/v3-bitget-api-sdk.git
+    cp -r ../v3-bitget-api-sdk/bitget-python-sdk-api/bitget .
+
+Installed requests
+    
+    poetry add requests
 
 
     
