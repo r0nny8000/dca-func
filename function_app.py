@@ -2,7 +2,7 @@ import datetime
 import logging
 import azure.functions as func
 import dca_func.tools as tools
-import bitget.v2.spot.market_api as market
+import bitget.v2.spot.market_api as market_api
 
 
 app = func.FunctionApp()
@@ -21,7 +21,7 @@ def coins_function(req: func.HttpRequest) -> func.HttpResponse:
     secretKey = "secretKey"
     passphrase = "passphrase"
 
-    market = market.MarketApi(apiKey, secretKey, passphrase)
+    market = market_api.MarketApi(apiKey, secretKey, passphrase)
 
     try:
 
@@ -34,7 +34,7 @@ def coins_function(req: func.HttpRequest) -> func.HttpResponse:
     except BitgetAPIException as e:
         return func.HttpResponse("Error: " + e.message)
 
-    return func.HttpResponse("The end,")
+    return func.HttpResponse("The end.")
     
 
 @app.function_name(name="dcatimer")
