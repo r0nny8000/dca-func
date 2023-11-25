@@ -14,7 +14,7 @@ def hello_function(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("TEST: " + tools.test())
     return func.HttpResponse("Hi. This is a test :" + tools.test())
 
-@app.function_ame(name="dcabitgetcoins")
+@app.function_name(name="dcabitgetcoins")
 @app.route(route="coins", auth_level=func.AuthLevel.ANONYMOUS)
 def coins_function(req: func.HttpRequest) -> func.HttpResponse:
     apiKey = "apiKey"
