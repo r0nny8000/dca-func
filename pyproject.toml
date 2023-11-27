@@ -10,6 +10,8 @@ packages = [{include = "dca_func"}]
 python = "3.10.*"
 azure-functions = "^1.15.0"
 requests = "^2.31.0"
+websockets = "^12.0"
+pycryptodome = "^3.19.0"
 
 
 [tool.poetry.group.dev.dependencies]

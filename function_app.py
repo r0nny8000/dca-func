@@ -4,7 +4,6 @@ import azure.functions as func
 import dca_func.tools as tools
 import bitget.v2.spot.market_api as market_api
 
-
 app = func.FunctionApp()
 
 @app.function_name(name="dcahttp")
@@ -17,23 +16,8 @@ def hello_function(req: func.HttpRequest) -> func.HttpResponse:
 @app.function_name(name="dcabitgetcoins")
 @app.route(route="coins", auth_level=func.AuthLevel.ANONYMOUS)
 def coins_function(req: func.HttpRequest) -> func.HttpResponse:
-    apiKey = "apiKey"
-    secretKey = "secretKey"
-    passphrase = "passphrase"
-
-    market = market_api.MarketApi(apiKey, secretKey, passphrase)
-
-    try:
-
-        params = {}
-        params["coin"] = "BTC"
-
-        response = market.coins(params)
-        return func.HttpResponse(response)
-
-    except BitgetAPIException as e:
-        return func.HttpResponse("Error: " + e.message)
-
+    print("execute coins function")
+   
     return func.HttpResponse("The end.")
     
 
@@ -41,4 +25,3 @@ def coins_function(req: func.HttpRequest) -> func.HttpResponse:
 @app.schedule(schedule="0 0 * * * *", arg_name="dcatimer", run_on_startup=False)
 def dca_timer(dcatimer: func.TimerRequest) -> None:
     logging.info("TIMER FUNCTION EXECUTED: %s", datetime.datetime.utcnow())
-    
