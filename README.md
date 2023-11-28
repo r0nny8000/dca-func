@@ -147,3 +147,6 @@ Press Cmd+Shift+P and search for "Select Interpreter". Press enter, and select a
         "python.defaultInterpreterPath": "/Users/me/Library/Caches/pypoetry/virtualenvs/marketdata-cli-MiIDVtXc-py3.7/bin/python"
     }
 
+
+hi there
+--------
