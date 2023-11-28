@@ -150,4 +150,9 @@ Press Cmd+Shift+P and search for "Select Interpreter". Press enter, and select a
 
 hi there
 --------
+<<<<<<< HEAD
 this works :-)
+=======
+this wors :-)
+for me
+>>>>>>> 459be6aa386b9b96752260f12bbd87072a7f0227
