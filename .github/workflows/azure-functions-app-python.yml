@@ -57,6 +57,7 @@ jobs:
         popd
     - name: 'Execute tests'
       run: |
+        pip install pytest
         pytest
 
     - name: 'Run Azure Functions Action'
