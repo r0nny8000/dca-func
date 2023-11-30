@@ -1,7 +1,7 @@
 import logging
 
 from bitget.v2.spot.market_api import MarketApi 
-from bitget.exceptions import BitgetAPIExceptionln 
+from bitget.exceptions import BitgetAPIException
 
 
 def get_coin_information(symbol: str): 
