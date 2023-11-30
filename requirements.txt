@@ -2,5 +2,7 @@ azure-functions==1.15.0 ; python_version >= "3.10.dev0" and python_version < "3.
 certifi==2023.11.17 ; python_version >= "3.10.dev0" and python_version < "3.11.dev0"
 charset-normalizer==3.3.2 ; python_version >= "3.10.dev0" and python_version < "3.11.dev0"
 idna==3.6 ; python_version >= "3.10.dev0" and python_version < "3.11.dev0"
+pycryptodome==3.19.0 ; python_version >= "3.10.dev0" and python_version < "3.11.dev0"
 requests==2.31.0 ; python_version >= "3.10.dev0" and python_version < "3.11.dev0"
 urllib3==2.1.0 ; python_version >= "3.10.dev0" and python_version < "3.11.dev0"
+websockets==12.0 ; python_version >= "3.10.dev0" and python_version < "3.11.dev0"
