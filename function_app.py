@@ -1,8 +1,6 @@
 import datetime
 import logging
 import azure.functions as func
-import dca_func.tools as tools
-# import bitget.v2.spot.market_api as market_api
 
 app = func.FunctionApp()
 
