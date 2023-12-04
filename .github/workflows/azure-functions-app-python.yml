@@ -56,6 +56,7 @@ jobs:
         pip install -r requirements.txt --target=".python_packages/lib/site-packages"
         popd
     - name: 'Execute tests'
+      shell: bash
       run: |
         pip install pytest
         pip install -r requirements.txt
