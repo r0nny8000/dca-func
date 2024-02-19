@@ -39,10 +39,24 @@ def get_header(api_key, sign, timestamp, passphrase):
 
 
 def parse_params_to_str(params):
-    url = '?'
-    for key, value in params.items():
-        url = url + str(key) + '=' + str(value) + '&'
+    params = [(key, val) for key, val in params.items()]
+    params.sort(key=lambda x: x[0])
+    # from urllib.parse import urlencode
+    # url = '?' +urlencode(params);
+    url = '?' +toQueryWithNoEncode(params);
+    if url == '?':
+        return ''
+    return url
+    # url = '?'
+    # for key, value in params.items():
+    #     url = url + str(key) + '=' + str(value) + '&'
+    #
+    # return url[0:-1]
 
+def toQueryWithNoEncode(params):
+    url = ''
+    for key, value in params:
+        url = url + str(key) + '=' + str(value) + '&'
     return url[0:-1]
 
 
