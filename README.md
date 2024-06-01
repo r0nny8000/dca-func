@@ -9,7 +9,7 @@ Created Git Repo online and checked out
 
     git clone git@github.com:r0nny8000/dca-func.git
 
-Init Azure Function
+Init Azure Function 
 
     func init dca-func --python -m V2
 
@@ -28,9 +28,7 @@ Moved the original files to the new folder
     mv dca-func-origin/* dca-func/
     mv dca-func-origin/.* dca-func/
 
-Now Git, Azure and Poetry are initiated
-
-Or simply use poetry init inside the folder
+Now Git, Azure and Poetry are initiated. Or simply use poetry init inside the folder.
 
 Configuring the shell by updating the project toml with python version 3.10.*
 
