@@ -2,6 +2,10 @@
 echo "deploy function in Azure"
 
 
+# This script deploys a function in Azure. It sets variables for the resource group, location, storage account, 
+# and function app. It then logs into Azure, creates a resource group, a storage account, and a function app,
+# and prepares to publish the function. All these operations are performed using Azure CLI commands.
+
 RESOURCE_GROUP=dcafuncrg
 LOCATION=westeurope
 STORAGE=dcafuncst
